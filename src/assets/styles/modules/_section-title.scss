@@ -1,0 +1,38 @@
+.section-title{
+  position: relative;
+  padding-bottom: 1.25em;
+
+  .tit{
+    margin-bottom: 2.5em;
+    font-size: 1.6rem;
+    color: #f0f0f0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-in-out;;
+    font-family: $font-tit;
+
+    &.active{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .underline{
+    &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0px;
+      height: 1px;
+      transition: all 1s ease-in-out;
+      opacity: 0;
+      background-color: #f0f0f0;
+    }
+
+    &.active::after{
+      width: 100%;
+      opacity: 0.4;
+    }
+  }
+}
