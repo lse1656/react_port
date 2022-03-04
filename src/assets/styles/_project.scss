@@ -1,0 +1,55 @@
+.project{
+  padding: 60px 0;
+
+  &-item{
+    position: relative;
+    overflow: hidden;
+
+    &::after{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #a1a1a1;
+      content: '';
+    }
+
+    a{
+      display: block;
+      padding: 6.3vw 0;
+
+      &:hover .rotate-box{
+        transform: translate3d(0,0,0);
+      }
+    }
+  }
+
+  h2{
+    position: relative;
+    padding-bottom: 1.25em;
+    font-size: 1.6rem;
+    font-family: $font-tit;
+
+    &::before{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #111;
+      content: '';
+    }
+  }
+
+  .rotate-box{
+    transform: translate3d(10vw,0,0);
+    transition: transform 300ms ease-in-out;
+    font-family: 'Roboto Condensed', sans-serif;
+
+    h3{
+      font-size: 12vw;
+      font-weight: 100;
+    }
+  }
+}
